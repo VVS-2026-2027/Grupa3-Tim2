@@ -1,0 +1,145 @@
+@model IEnumerable<Task6.Models.EscapeRoom>
+
+@{
+    ViewData["Title"] = "Upravljanje sobama";
+}
+
+<div class="admin-page">
+
+    <div class="admin-header">
+        <div>
+            <p class="profile-small-title">THE LAST KEY</p>
+            <h1>Upravljanje Escape sobama</h1>
+        </div>
+
+        <a asp-controller="Zaposlenik"
+               asp-action="Dashboard"
+               class="home-btn">
+            Zaposlenik panel
+        </a>
+    </div>
+
+    <a asp-controller="Zaposlenik"
+           asp-action="CreateRoom"
+           class="admin-add-btn">
+        + Nova soba
+    </a>
+
+    <div class="mb-3">
+        <input type="text"
+               id="roomSearch"
+               class="form-control"
+               style="max-width:300px;"
+               placeholder="Pretraži po nazivu sobe..." />
+    </div>
+
+    @if (Model.Any())
+    {
+        <div class="admin-table-box">
+
+            <table class="table admin-table">
+
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Naziv</th>
+                        <th>Opis</th>
+                        <th>Težina</th>
+                        <th>Kapacitet</th>
+                        <th>Cijena (KM)</th>
+                        <th>Akcije</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (var room in Model)
+                    {
+                        <tr>
+
+                            <td>@room.RoomID</td>
+
+                            <td>@room.Naziv</td>
+
+                            <td>
+                                @(room.Opis.Length > 40
+                                    ? room.Opis.Substring(0, 40) + "..."
+                                    : room.Opis)
+                            </td>
+
+                            <td>@room.Tezina</td>
+
+                            <td>@room.Kapacitet</td>
+
+                            <td>
+                                @if (room.IsDiscountActive())
+                                {
+                                    <span><s>@room.Cijena</s> @room.CurrentPrice KM</span>
+                                }
+                                else
+                                {
+                                    <span>@room.Cijena KM</span>
+                                }
+                            </td>
+
+                            <td>
+
+                                <a asp-controller="Zaposlenik"
+                                       asp-action="EditRoom"
+                                       asp-route-id="@room.RoomID"
+                                       class="admin-edit-btn">
+                                    Uredi
+                                </a>
+
+                                <a asp-controller="Zaposlenik"
+                                       asp-action="DeleteRoom"
+                                       asp-route-id="@room.RoomID"
+                                       class="admin-delete-btn">
+                                    Obriši
+                                </a>
+
+                            </td>
+
+                        </tr>
+                    }
+                </tbody>
+
+            </table>
+
+        </div>
+    }
+    else
+    {
+        <div class="empty-reservations">
+            Nema registrovanih soba.
+
+            <br /><br />
+
+            <a asp-controller="Zaposlenik"
+                   asp-action="CreateRoom"
+                   class="admin-add-btn">
+                Kreiraj prvu sobu
+            </a>
+        </div>
+    }
+
+</div>
+
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var searchInput = document.getElementById('roomSearch');
+            var rows = document.querySelectorAll('.admin-table tbody tr');
+
+            if (!searchInput) return;
+
+            searchInput.addEventListener('input', function () {
+                var query = searchInput.value.trim().toLowerCase();
+
+                rows.forEach(function (row) {
+                    var naziv = row.children[1].textContent.trim().toLowerCase();
+                    row.style.display = naziv.includes(query) ? '' : 'none';
+                });
+            });
+        });
+    </script>
+}

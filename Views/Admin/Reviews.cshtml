@@ -1,0 +1,88 @@
+@model IEnumerable<Task6.Models.Recenzija>
+
+@{
+    ViewData["Title"] = "Upravljanje recenzijama";
+}
+
+<div class="admin-page">
+
+    <div class="admin-header">
+        <div>
+            <p class="profile-small-title">THE LAST KEY</p>
+            <h1>Upravljanje recenzijama</h1>
+        </div>
+
+        <a asp-controller="Admin"
+               asp-action="Dashboard"
+               class="home-btn">
+            Admin panel
+        </a>
+    </div>
+
+    @if (Model.Any())
+    {
+        <div class="admin-table-box">
+            <table class="table admin-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Korisnik</th>
+                        <th>Soba</th>
+                        <th>Ocjena</th>
+                        <th>Komentar</th>
+                        <th>Datum</th>
+                        <th>Akcije</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (var review in Model)
+                    {
+                        <tr>
+                            <td>@review.RecenzijaID</td>
+
+                            <td>
+                                @review.Korisnik.Ime
+                                @review.Korisnik.Prezime
+                            </td>
+
+                            <td>@review.EscapeRoom.Naziv</td>
+
+                            <td>
+                                <span style="color:#FE7F2D;font-weight:700;">
+                                    @review.Ocjena ⭐
+                                </span>
+                            </td>
+
+                            <td>
+                                @(review.Komentar?.Length > 40
+                                    ? review.Komentar.Substring(0, 40) + "..."
+                                    : review.Komentar)
+                            </td>
+
+                            <td>
+                                @review.Datum.ToString("dd.MM.yyyy HH:mm")
+                            </td>
+
+                            <td>
+                                <a asp-controller="Admin"
+                                       asp-action="DeleteReview"
+                                       asp-route-id="@review.RecenzijaID"
+                                       class="admin-delete-btn">
+                                    Obriši
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+    else
+    {
+        <div class="empty-reservations">
+            Nema recenzija.
+        </div>
+    }
+
+</div>

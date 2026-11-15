@@ -1,0 +1,85 @@
+@model IEnumerable<Task6.Models.Obavijest>
+
+@{
+    ViewData["Title"] = "Upravljanje obavijestima";
+}
+
+<div class="admin-page">
+
+    <div class="admin-header">
+        <div>
+            <p class="profile-small-title">THE LAST KEY</p>
+            <h1>Upravljanje obavijestima</h1>
+        </div>
+
+        <a asp-controller="Admin"
+               asp-action="Dashboard"
+               class="home-btn">
+            Admin panel
+        </a>
+    </div>
+
+    <a asp-controller="Admin"
+           asp-action="CreateNotification"
+           class="admin-add-btn">
+        + Nova obavijest
+    </a>
+
+    @if (Model.Any())
+    {
+        <div class="admin-table-box">
+            <table class="table admin-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Naslov</th>
+                        <th>Sadržaj</th>
+                        <th>Tip</th>
+                        <th>Datum</th>
+                        <th>Akcije</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (var notif in Model)
+                    {
+                        <tr>
+                            <td>@notif.ObavijestID</td>
+                            <td>@notif.Naslov</td>
+
+                            <td>
+                                @(notif.Sadrzaj.Length > 40
+                                    ? notif.Sadrzaj.Substring(0, 40) + "..."
+                                    : notif.Sadrzaj)
+                            </td>
+
+                            <td>@notif.TipObavijesti</td>
+                            <td>@notif.Datum.ToString("dd.MM.yyyy HH:mm")</td>
+
+                            <td>
+                                <form method="post"
+                                      asp-controller="Admin"
+                                      asp-action="DeleteNotification"
+                                      class="d-inline">
+                                    @Html.AntiForgeryToken()
+                                    <input type="hidden" name="id" value="@notif.ObavijestID" />
+
+                                    <button type="submit" class="admin-delete-btn">
+                                        Obriši
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+    else
+    {
+        <div class="empty-reservations">
+            Nema obavijesti.
+        </div>
+    }
+
+</div>

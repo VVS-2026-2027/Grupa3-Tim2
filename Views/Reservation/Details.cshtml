@@ -1,0 +1,87 @@
+﻿@model Task6.Models.Rezervacija
+
+@{
+    ViewData["Title"] = "Detalji rezervacije";
+    var placanje = ViewBag.Placanje as Task6.Models.Placanje;
+    var pricePerPerson = Model.Termin.EscapeRoom.CurrentPrice;
+    var ukupno = Model.BrojOsoba * pricePerPerson;
+
+    var terminDateTime = Model.Termin.Datum.Date;
+    if (TimeSpan.TryParse(Model.Termin.Vrijeme, out var terminVrijeme))
+    {
+        terminDateTime = terminDateTime.Add(terminVrijeme);
+    }
+    var terminProsao = terminDateTime < DateTime.UtcNow;
+}
+
+<div class="reservation-details-page">
+    <div class="reservation-details-card">
+
+        <a asp-controller="Profil"
+               asp-action="Index"
+               class="back-profile-btn">
+            ← Nazad na profil
+        </a>
+
+        <p class="profile-small-title">THE LAST KEY</p>
+        <h1>Detalji rezervacije</h1>
+
+        <h2>@Model.Termin.EscapeRoom.Naziv</h2>
+
+        <div class="reservation-info-grid">
+            <div><strong>Datum:</strong> @Model.Termin.Datum.ToString("dd.MM.yyyy")</div>
+            <div><strong>Vrijeme:</strong> @Model.Termin.Vrijeme</div>
+            <div><strong>Broj osoba:</strong> @Model.BrojOsoba</div>
+            <div><strong>Cijena po osobi:</strong>
+                @if (Model.Termin.EscapeRoom.IsDiscountActive())
+                {
+                    <span><s>@Model.Termin.EscapeRoom.Cijena</s> @Model.Termin.EscapeRoom.CurrentPrice KM</span>
+                }
+                else
+                {
+                    <span>@Model.Termin.EscapeRoom.Cijena KM</span>
+                }
+            </div>
+            <div><strong>Ukupno:</strong> @ukupno KM</div>
+            <div><strong>Kreirano:</strong> @Model.DatumKreiranja.ToString("dd.MM.yyyy HH:mm")</div>
+        </div>
+
+        <div class="reservation-status-row">
+            <span>Status rezervacije:</span>
+
+            @if (Model.Status)
+            {
+                <span class="status-badge status-ok">Potvrđena</span>
+            }
+            else
+            {
+                <span class="status-badge status-cancel">Otkazana</span>
+            }
+        </div>
+
+        <div class="reservation-status-row">
+            <span>Status plaćanja:</span>
+
+            @if (placanje != null && placanje.Status)
+            {
+                <span class="status-badge status-ok">Plaćeno</span>
+            }
+            else
+            {
+                <span class="status-badge status-cancel">Nije plaćeno</span>
+            }
+        </div>
+
+        <div class="reservation-details-actions">
+            @if ((placanje == null || !placanje.Status) && !terminProsao && Model.Status)
+            {
+                <a asp-controller="Payment"
+                       asp-action="Pay"
+                       asp-route-reservationId="@Model.RezervacijaID"
+                       class="details-btn">
+                    Plati online
+                </a>
+            }
+        </div>
+    </div>
+</div>

@@ -30,4 +30,8 @@
 		<PackageReference Include="supabase-csharp" Version="0.16.2" />
 	</ItemGroup>
 
+	<ItemGroup>
+		<InternalsVisibleTo Include="Task6.Tests" />
+	</ItemGroup>
+
 </Project>

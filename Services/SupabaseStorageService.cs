@@ -1,30 +1,42 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
-using Supabase;
+using Supabase.Storage;
+using Supabase.Storage.Interfaces;
 
 namespace Task6.Services
 {
-    public class SupabaseStorageService
+    public class SupabaseStorageService : IStorageService
     {
-        private readonly Client _supabase;
-        private readonly string _bucketName = "room-images";
+        private readonly IStorageClient<Bucket, FileObject> _storage;
+        private const string BucketName = "room-images";
         private readonly ILogger<SupabaseStorageService> _logger;
 
         public SupabaseStorageService(IConfiguration configuration, ILogger<SupabaseStorageService> logger)
+            : this(CreateStorage(configuration), logger)
         {
+        }
+
+        internal SupabaseStorageService(IStorageClient<Bucket, FileObject> storage, ILogger<SupabaseStorageService> logger)
+        {
+            _storage = storage;
             _logger = logger;
+        }
+
+        private static IStorageClient<Bucket, FileObject> CreateStorage(IConfiguration configuration)
+        {
             var supabaseUrl = configuration["Supabase:Url"]!;
             var serviceKey = configuration["Supabase:ServiceKey"]!;
 
-            _supabase = new Client(supabaseUrl, serviceKey);
-            _supabase.InitializeAsync().Wait();
+            var supabase = new Supabase.Client(supabaseUrl, serviceKey);
+            supabase.InitializeAsync().Wait();
+            return supabase.Storage;
         }
 
         public async Task<string?> UploadImageAsync(Stream fileStream, string fileName, string contentType)
         {
             try
             {
-                var bucket = _supabase.Storage.From(_bucketName);
+                var bucket = _storage.From(BucketName);
 
                 var uniqueName = $"{Guid.NewGuid()}_{fileName}";
 
@@ -57,9 +69,9 @@ namespace Task6.Services
 
             try
             {
-                var bucket = _supabase.Storage.From(_bucketName);
+                var bucket = _storage.From(BucketName);
 
-                var fileName = imageUrl.Split($"/{_bucketName}/").Last();
+                var fileName = imageUrl.Split($"/{BucketName}/").Last();
 
                 await bucket.Remove(new List<string> { fileName });
 

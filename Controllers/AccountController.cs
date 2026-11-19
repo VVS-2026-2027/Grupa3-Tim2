@@ -13,7 +13,7 @@ namespace Task6.Controllers
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly ILogger<AccountController> _logger;
-        private readonly EmailService _emailService;
+        private readonly IEmailService _emailService;
 
         private const string DbErrorMessage = "Došlo je do problema sa bazom podataka. Pokušajte ponovo kasnije.";
 
@@ -21,7 +21,7 @@ namespace Task6.Controllers
             SignInManager<ApplicationUser> signInManager,
             UserManager<ApplicationUser> userManager,
             ILogger<AccountController> logger,
-            EmailService emailService)
+            IEmailService emailService)
         {
             _signInManager = signInManager;
             _userManager = userManager;

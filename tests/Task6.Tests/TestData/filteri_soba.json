@@ -1,0 +1,12 @@
+[
+  { "opis": "Bez filtera", "searchTerm": null, "filterTezina": null, "brojIgraca": null, "ocekivaniBroj": 4 },
+  { "opis": "Pretraga po nazivu", "searchTerm": "zatvor", "filterTezina": null, "brojIgraca": null, "ocekivaniBroj": 1 },
+  { "opis": "Pretraga velikim slovima", "searchTerm": "LABORATORIJA", "filterTezina": null, "brojIgraca": null, "ocekivaniBroj": 1 },
+  { "opis": "Pretraga po opisu", "searchTerm": "horor", "filterTezina": null, "brojIgraca": null, "ocekivaniBroj": 2 },
+  { "opis": "Pretraga bez rezultata", "searchTerm": "svemir", "filterTezina": null, "brojIgraca": null, "ocekivaniBroj": 0 },
+  { "opis": "Filter tezina Teska", "searchTerm": null, "filterTezina": "Teska", "brojIgraca": null, "ocekivaniBroj": 2 },
+  { "opis": "Nepostojeca tezina se ignorise", "searchTerm": null, "filterTezina": "Nemoguca", "brojIgraca": null, "ocekivaniBroj": 4 },
+  { "opis": "Broj igraca 6", "searchTerm": null, "filterTezina": null, "brojIgraca": 6, "ocekivaniBroj": 2 },
+  { "opis": "Broj igraca 0 se ignorise", "searchTerm": null, "filterTezina": null, "brojIgraca": 0, "ocekivaniBroj": 4 },
+  { "opis": "Kombinacija tezine i broja igraca", "searchTerm": null, "filterTezina": "Teska", "brojIgraca": 6, "ocekivaniBroj": 1 }
+]

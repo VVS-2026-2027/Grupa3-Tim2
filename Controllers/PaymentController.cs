@@ -14,12 +14,12 @@ namespace Task6.Controllers
     {
         private readonly EscapeRoomDbContext _context;
         private readonly UserManager<ApplicationUser> _userManager;
-        private readonly EmailService _emailService;
+        private readonly IEmailService _emailService;
 
         public PaymentController(
             EscapeRoomDbContext context,
             UserManager<ApplicationUser> userManager,
-            EmailService emailService)
+            IEmailService emailService)
         {
             _context = context;
             _userManager = userManager;

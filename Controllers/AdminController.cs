@@ -14,10 +14,10 @@ namespace Task6.Controllers
     public class AdminController : Controller
     {
         private readonly EscapeRoomDbContext _context;
-        private readonly EmailService _emailService;
-        private readonly SupabaseStorageService _storageService;
+        private readonly IEmailService _emailService;
+        private readonly IStorageService _storageService;
 
-        public AdminController(EscapeRoomDbContext context, EmailService emailService, SupabaseStorageService storageService)
+        public AdminController(EscapeRoomDbContext context, IEmailService emailService, IStorageService storageService)
         {
             _context = context;
             _emailService = emailService;

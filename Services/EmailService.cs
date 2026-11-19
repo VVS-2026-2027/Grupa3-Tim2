@@ -4,13 +4,20 @@ using MimeKit;
 
 namespace Task6.Services
 {
-    public class EmailService
+    public class EmailService : IEmailService
     {
         private readonly IConfiguration _configuration;
+        private readonly Func<ISmtpClient> _createClient;
 
         public EmailService(IConfiguration configuration)
+            : this(configuration, () => new SmtpClient())
+        {
+        }
+
+        internal EmailService(IConfiguration configuration, Func<ISmtpClient> createClient)
         {
             _configuration = configuration;
+            _createClient = createClient;
         }
 
         public async Task SendEmailAsync(string toEmail, string subject, string message)
@@ -32,7 +39,7 @@ namespace Task6.Services
                 Text = message
             };
 
-            using var smtp = new SmtpClient();
+            using var smtp = _createClient();
 
             await smtp.ConnectAsync(
                 settings["SmtpServer"],

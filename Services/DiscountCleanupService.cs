@@ -43,7 +43,7 @@ namespace Task6.Services
             _logger.LogInformation("Discount cleanup service stopped.");
         }
 
-        private async Task CleanupExpiredDiscountsAsync(CancellationToken cancellationToken)
+        internal async Task CleanupExpiredDiscountsAsync(CancellationToken cancellationToken)
         {
             using var scope = _serviceProvider.CreateScope();
             var db = scope.ServiceProvider.GetRequiredService<EscapeRoomDbContext>();

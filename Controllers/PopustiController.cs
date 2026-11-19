@@ -12,9 +12,9 @@ namespace Task6.Controllers
     public class PopustiController : Controller
     {
         private readonly EscapeRoomDbContext _context;
-        private readonly EmailService _emailService;
+        private readonly IEmailService _emailService;
 
-        public PopustiController(EscapeRoomDbContext context, EmailService emailService)
+        public PopustiController(EscapeRoomDbContext context, IEmailService emailService)
         {
             _context = context;
             _emailService = emailService;

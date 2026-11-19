@@ -1,0 +1,14 @@
+brojKartice;imeNaKartici;datumIsteka;cvv;ocekivanaGreska
+;Lamija Maglic;12/35;123;Sva polja su obavezna.
+4111111111111111; ;12/35;123;Sva polja su obavezna.
+4111111111111111;Lamija Maglic;;123;Sva polja su obavezna.
+4111111111111111;Lamija Maglic;12/35;;Sva polja su obavezna.
+411111111111111;Lamija Maglic;12/35;123;Broj kartice mora imati tačno 16 cifara.
+41111111111111112;Lamija Maglic;12/35;123;Broj kartice mora imati tačno 16 cifara.
+4111 1111 1111 111A;Lamija Maglic;12/35;123;Broj kartice mora imati tačno 16 cifara.
+4111111111111111;Al;12/35;123;Ime na kartici mora imati najmanje 3 karaktera.
+4111111111111111;Lamija Maglic;1235;123;Datum isteka mora biti u formatu MM/YY.
+4111111111111111;Lamija Maglic;13/35;123;Datum isteka mora biti u formatu MM/YY.
+4111111111111111;Lamija Maglic;01/20;123;Kartica je istekla.
+4111111111111111;Lamija Maglic;12/35;12;CVV mora imati tačno 3 cifre.
+4111111111111111;Lamija Maglic;12/35;12a;CVV mora imati tačno 3 cifre.

@@ -43,7 +43,7 @@ namespace Task6.Services
             _logger.LogInformation("Termin cleanup service stopped.");
         }
 
-        private async Task CleanupExpiredTerminiAsync(CancellationToken cancellationToken)
+        internal async Task CleanupExpiredTerminiAsync(CancellationToken cancellationToken)
         {
             using var scope = _serviceProvider.CreateScope();
             var db = scope.ServiceProvider.GetRequiredService<EscapeRoomDbContext>();

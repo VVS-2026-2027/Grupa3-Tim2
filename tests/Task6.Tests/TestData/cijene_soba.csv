@@ -1,0 +1,11 @@
+unesenaCijena;validna
+50;true
+0;true
+49.99;true
+120.5;true
+49,99;false
+-10;false
+abc;false
+;false
+5.;false
+١٢;false

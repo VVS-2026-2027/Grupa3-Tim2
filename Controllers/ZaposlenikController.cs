@@ -14,10 +14,10 @@ namespace Task6.Controllers
     public class ZaposlenikController : Controller
     {
         private readonly EscapeRoomDbContext _context;
-        private readonly EmailService _emailService;
-        private readonly SupabaseStorageService _storageService;
+        private readonly IEmailService _emailService;
+        private readonly IStorageService _storageService;
 
-        public ZaposlenikController(EscapeRoomDbContext context, EmailService emailService, SupabaseStorageService storageService)
+        public ZaposlenikController(EscapeRoomDbContext context, IEmailService emailService, IStorageService storageService)
         {
             _context = context;
             _emailService = emailService;

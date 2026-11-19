@@ -1,0 +1,10 @@
+[
+  { "opis": "Aktivan popust 20%", "cijena": 100, "popust": 20, "pocetakDana": -1, "krajDana": 1, "ocekivanaCijena": 80, "aktivan": true },
+  { "opis": "Aktivan popust 15% sa decimalama", "cijena": 45, "popust": 15, "pocetakDana": -2, "krajDana": 5, "ocekivanaCijena": 38.25, "aktivan": true },
+  { "opis": "Popust 100%", "cijena": 60, "popust": 100, "pocetakDana": -1, "krajDana": 1, "ocekivanaCijena": 0, "aktivan": true },
+  { "opis": "Popust jos nije poceo", "cijena": 100, "popust": 30, "pocetakDana": 2, "krajDana": 10, "ocekivanaCijena": 100, "aktivan": false },
+  { "opis": "Popust je istekao", "cijena": 100, "popust": 30, "pocetakDana": -10, "krajDana": -1, "ocekivanaCijena": 100, "aktivan": false },
+  { "opis": "Popust 0%", "cijena": 70, "popust": 0, "pocetakDana": -1, "krajDana": 1, "ocekivanaCijena": 70, "aktivan": false },
+  { "opis": "Bez datuma pocetka", "cijena": 70, "popust": 10, "pocetakDana": null, "krajDana": 1, "ocekivanaCijena": 70, "aktivan": false },
+  { "opis": "Bez datuma kraja", "cijena": 70, "popust": 10, "pocetakDana": -1, "krajDana": null, "ocekivanaCijena": 70, "aktivan": false }
+]

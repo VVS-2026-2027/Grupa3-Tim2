@@ -15,8 +15,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddScoped<EmailService>();
-builder.Services.AddScoped<SupabaseStorageService>();
+builder.Services.AddScoped<IEmailService, EmailService>();
+builder.Services.AddScoped<IStorageService, SupabaseStorageService>();
 builder.Services.AddHostedService<DiscountCleanupService>();
 builder.Services.AddHostedService<TerminCleanupService>();
 

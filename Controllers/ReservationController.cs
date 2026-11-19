@@ -84,6 +84,10 @@ namespace Task6.Controllers
 
                 if (termin == null || !termin.Dostupnost)
                     return BadRequest(new { message = "Termin nije dostupan." });
+                if (!ReservationValidator.IsValidPartySize(brojOsoba, termin.EscapeRoom.Kapacitet))
+                {
+                    return BadRequest(new { message = "Broj osoba mora biti najmanje 1 i ne smije prelaziti kapacitet sobe." });
+                }
 
                 var terminDateTime = termin.Datum.Date;
                 if (TimeSpan.TryParse(termin.Vrijeme, out var terminVrijeme))

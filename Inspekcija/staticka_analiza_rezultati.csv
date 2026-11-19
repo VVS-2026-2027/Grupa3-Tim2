@@ -1,0 +1,179 @@
+Pravilo,Alat,Fajl,Linija,Poruka
+CA1707,.NET analizatori (CA),Controllers/CartsController.cs,1,Remove the underscores from assembly name Cvjecara_Latica
+CA1707,.NET analizatori (CA),Controllers/CartsController.cs,11,Remove the underscores from namespace name 'Cvjecara_Latica'
+S125,SonarAnalyzer.CSharp,Controllers/CartsController.cs,28,Remove this commented out code.
+CS8602,C# kompajler (nullable),Controllers/CartsController.cs,32,Dereference of a possibly null reference.
+CS8602,C# kompajler (nullable),Controllers/CartsController.cs,33,Dereference of a possibly null reference.
+S6966,SonarAnalyzer.CSharp,Controllers/CartsController.cs,36,Await ToListAsync instead.
+S6967,SonarAnalyzer.CSharp,Controllers/CartsController.cs,47,ModelState.IsValid should be checked in controller actions.
+S6967,SonarAnalyzer.CSharp,Controllers/CartsController.cs,91,ModelState.IsValid should be checked in controller actions.
+S4144,SonarAnalyzer.CSharp,Controllers/CartsController.cs,142,Update this method so that its implementation is not identical to 'Details'.
+S6967,SonarAnalyzer.CSharp,Controllers/CartsController.cs,142,ModelState.IsValid should be checked in controller actions.
+S6967,SonarAnalyzer.CSharp,Controllers/CartsController.cs,162,ModelState.IsValid should be checked in controller actions.
+S1144,SonarAnalyzer.CSharp,Controllers/CartsController.cs,178,Remove the unused private method 'CartExists'.
+S6967,SonarAnalyzer.CSharp,Controllers/CartsController.cs,183,ModelState.IsValid should be checked in controller actions.
+CS8602,C# kompajler (nullable),Controllers/CartsController.cs,191,Dereference of a possibly null reference.
+CS8602,C# kompajler (nullable),Controllers/CartsController.cs,192,Dereference of a possibly null reference.
+S6967,SonarAnalyzer.CSharp,Controllers/CartsController.cs,237,ModelState.IsValid should be checked in controller actions.
+S6966,SonarAnalyzer.CSharp,Controllers/CartsController.cs,240,Await ToListAsync instead.
+S6966,SonarAnalyzer.CSharp,Controllers/CartsController.cs,261,Await FirstOrDefaultAsync instead.
+S6966,SonarAnalyzer.CSharp,Controllers/CartsController.cs,283,Await SaveChangesAsync instead.
+S6966,SonarAnalyzer.CSharp,Controllers/CartsController.cs,344,Await ToListAsync instead.
+CA1860,.NET analizatori (CA),Controllers/CartsController.cs,349,"Prefer comparing 'Count' to 0 rather than using 'Any()', both for clarity and for performance"
+CS8601,C# kompajler (nullable),Controllers/CartsController.cs,390,Possible null reference assignment.
+CS8604,C# kompajler (nullable),Controllers/CartsController.cs,417,"Possible null reference argument for parameter 'toEmail' in 'Task EmailService.SendEmailAsync(string toEmail, string subject, string bodyHtml)'."
+S6967,SonarAnalyzer.CSharp,Controllers/CartsController.cs,439,ModelState.IsValid should be checked in controller actions.
+S6967,SonarAnalyzer.CSharp,Controllers/DiscountsController.cs,31,ModelState.IsValid should be checked in controller actions.
+S6967,SonarAnalyzer.CSharp,Controllers/DiscountsController.cs,71,ModelState.IsValid should be checked in controller actions.
+S4144,SonarAnalyzer.CSharp,Controllers/DiscountsController.cs,122,Update this method so that its implementation is not identical to 'Details'.
+S6967,SonarAnalyzer.CSharp,Controllers/DiscountsController.cs,122,ModelState.IsValid should be checked in controller actions.
+S6967,SonarAnalyzer.CSharp,Controllers/DiscountsController.cs,142,ModelState.IsValid should be checked in controller actions.
+S4487,SonarAnalyzer.CSharp,Controllers/HomeController.cs,13,Remove this unread private field '_logger' or refactor the code to use its value.
+CA1305,.NET analizatori (CA),Controllers/HomeController.cs,98,The behavior of 'int.ToString()' could vary based on the current user's locale settings. Replace this call in 'HomeController.Register(Register)' with a call to 'int.ToString(IFormatProvider)'.
+CS8604,C# kompajler (nullable),Controllers/HomeController.cs,107,"Possible null reference argument for parameter 'toEmail' in 'Task EmailService.SendEmailAsync(string toEmail, string subject, string bodyHtml)'."
+CA1305,.NET analizatori (CA),Controllers/HomeController.cs,141,The behavior of 'int.ToString()' could vary based on the current user's locale settings. Replace this call in 'HomeController.Register(Register)' with a call to 'int.ToString(IFormatProvider)'.
+S2325,SonarAnalyzer.CSharp,Controllers/HomeController.cs,190,Make 'GenerateDiscountCode' a static method.
+CA1822,.NET analizatori (CA),Controllers/HomeController.cs,190,Member 'GenerateDiscountCode' does not access instance data and can be marked as static
+CA1311,.NET analizatori (CA),Controllers/HomeController.cs,192,Specify a culture or use an invariant version to avoid implicit dependency on current culture
+CA1304,.NET analizatori (CA),Controllers/HomeController.cs,192,The behavior of 'string.ToUpper()' could vary based on the current user's locale settings. Replace this call in 'HomeController.GenerateDiscountCode()' with a call to 'string.ToUpper(CultureInfo)'.
+CS8602,C# kompajler (nullable),Controllers/HomeController.cs,218,Dereference of a possibly null reference.
+CS8604,C# kompajler (nullable),Controllers/HomeController.cs,218,Possible null reference argument for parameter 's' in 'DateTime DateTime.Parse(string s)'.
+S6580,SonarAnalyzer.CSharp,Controllers/HomeController.cs,218,Use a format provider when parsing date and time.
+CA1305,.NET analizatori (CA),Controllers/HomeController.cs,218,"The behavior of 'DateTime.Parse(string)' could vary based on the current user's locale settings. Replace this call in 'HomeController.VerifyCode(string)' with a call to 'DateTime.Parse(string, IFormatProvider)'."
+CA1305,.NET analizatori (CA),Controllers/HomeController.cs,260,The behavior of 'int.ToString()' could vary based on the current user's locale settings. Replace this call in 'HomeController.ResendCode()' with a call to 'int.ToString(IFormatProvider)'.
+S6967,SonarAnalyzer.CSharp,Controllers/HomeController.cs,309,ModelState.IsValid should be checked in controller actions.
+CS8602,C# kompajler (nullable),Controllers/HomeController.cs,318,Dereference of a possibly null reference.
+CA1860,.NET analizatori (CA),Controllers/HomeController.cs,322,"Prefer comparing 'Count' to 0 rather than using 'Any()', both for clarity and for performance"
+CS8602,C# kompajler (nullable),Controllers/HomeController.cs,324,Dereference of a possibly null reference.
+CA1311,.NET analizatori (CA),Controllers/HomeController.cs,324,Specify a culture or use an invariant version to avoid implicit dependency on current culture
+CA1304,.NET analizatori (CA),Controllers/HomeController.cs,324,"The behavior of 'string.ToLower()' could vary based on the current user's locale settings. Replace this call in 'HomeController.SearchResults(string, List<string>, List<string>, string, string)' with a call to 'string.ToLower(CultureInfo)'."
+CA1860,.NET analizatori (CA),Controllers/HomeController.cs,327,"Prefer comparing 'Count' to 0 rather than using 'Any()', both for clarity and for performance"
+CA1311,.NET analizatori (CA),Controllers/HomeController.cs,329,Specify a culture or use an invariant version to avoid implicit dependency on current culture
+CA1304,.NET analizatori (CA),Controllers/HomeController.cs,329,"The behavior of 'string.ToLower()' could vary based on the current user's locale settings. Replace this call in 'HomeController.SearchResults(string, List<string>, List<string>, string, string)' with a call to 'string.ToLower(CultureInfo)'."
+CA1311,.NET analizatori (CA),Controllers/HomeController.cs,334,Specify a culture or use an invariant version to avoid implicit dependency on current culture
+CA1311,.NET analizatori (CA),Controllers/HomeController.cs,334,Specify a culture or use an invariant version to avoid implicit dependency on current culture
+CA1862,.NET analizatori (CA),Controllers/HomeController.cs,334,"Prefer using 'string.Equals(string, StringComparison)' to perform a case-insensitive comparison, but keep in mind that this might cause subtle changes in behavior, so make sure to conduct thorough testing after applying the suggestion, or if culturally sensitive comparison is not required, consider using 'StringComparison.OrdinalIgnoreCase'"
+CA1304,.NET analizatori (CA),Controllers/HomeController.cs,334,"The behavior of 'string.ToLower()' could vary based on the current user's locale settings. Replace this call in 'HomeController.SearchResults(string, List<string>, List<string>, string, string)' with a call to 'string.ToLower(CultureInfo)'."
+CA1304,.NET analizatori (CA),Controllers/HomeController.cs,334,"The behavior of 'string.ToLower()' could vary based on the current user's locale settings. Replace this call in 'HomeController.SearchResults(string, List<string>, List<string>, string, string)' with a call to 'string.ToLower(CultureInfo)'."
+CA1847,.NET analizatori (CA),Controllers/HomeController.cs,339,Use 'string.Contains(char)' instead of 'string.Contains(string)' when searching for a single character
+S1244,SonarAnalyzer.CSharp,Controllers/HomeController.cs,351,"Do not check floating point equality with exact values, use a range instead."
+S125,SonarAnalyzer.CSharp,Controllers/OrdersController.cs,25,Remove this commented out code.
+S6967,SonarAnalyzer.CSharp,Controllers/OrdersController.cs,48,ModelState.IsValid should be checked in controller actions.
+S6967,SonarAnalyzer.CSharp,Controllers/OrdersController.cs,99,ModelState.IsValid should be checked in controller actions.
+S4144,SonarAnalyzer.CSharp,Controllers/OrdersController.cs,157,Update this method so that its implementation is not identical to 'Details'.
+S6967,SonarAnalyzer.CSharp,Controllers/OrdersController.cs,157,ModelState.IsValid should be checked in controller actions.
+S6967,SonarAnalyzer.CSharp,Controllers/OrdersController.cs,181,ModelState.IsValid should be checked in controller actions.
+S6967,SonarAnalyzer.CSharp,Controllers/OrdersController.cs,199,ModelState.IsValid should be checked in controller actions.
+S6967,SonarAnalyzer.CSharp,Controllers/PaymentsController.cs,32,ModelState.IsValid should be checked in controller actions.
+S6967,SonarAnalyzer.CSharp,Controllers/PaymentsController.cs,75,ModelState.IsValid should be checked in controller actions.
+S4144,SonarAnalyzer.CSharp,Controllers/PaymentsController.cs,128,Update this method so that its implementation is not identical to 'Details'.
+S6967,SonarAnalyzer.CSharp,Controllers/PaymentsController.cs,128,ModelState.IsValid should be checked in controller actions.
+S6967,SonarAnalyzer.CSharp,Controllers/PaymentsController.cs,149,ModelState.IsValid should be checked in controller actions.
+S6967,SonarAnalyzer.CSharp,Controllers/ProductOrdersController.cs,35,ModelState.IsValid should be checked in controller actions.
+S6967,SonarAnalyzer.CSharp,Controllers/ProductOrdersController.cs,85,ModelState.IsValid should be checked in controller actions.
+S4144,SonarAnalyzer.CSharp,Controllers/ProductOrdersController.cs,142,Update this method so that its implementation is not identical to 'Details'.
+S6967,SonarAnalyzer.CSharp,Controllers/ProductOrdersController.cs,142,ModelState.IsValid should be checked in controller actions.
+S6967,SonarAnalyzer.CSharp,Controllers/ProductOrdersController.cs,165,ModelState.IsValid should be checked in controller actions.
+S6967,SonarAnalyzer.CSharp,Controllers/ProductSalesController.cs,33,ModelState.IsValid should be checked in controller actions.
+S6967,SonarAnalyzer.CSharp,Controllers/ProductSalesController.cs,78,ModelState.IsValid should be checked in controller actions.
+S4144,SonarAnalyzer.CSharp,Controllers/ProductSalesController.cs,133,Update this method so that its implementation is not identical to 'Details'.
+S6967,SonarAnalyzer.CSharp,Controllers/ProductSalesController.cs,133,ModelState.IsValid should be checked in controller actions.
+S6967,SonarAnalyzer.CSharp,Controllers/ProductSalesController.cs,155,ModelState.IsValid should be checked in controller actions.
+S6967,SonarAnalyzer.CSharp,Controllers/ProductsController.cs,33,ModelState.IsValid should be checked in controller actions.
+S6967,SonarAnalyzer.CSharp,Controllers/ProductsController.cs,77,ModelState.IsValid should be checked in controller actions.
+S4144,SonarAnalyzer.CSharp,Controllers/ProductsController.cs,130,Update this method so that its implementation is not identical to 'Details'.
+S6967,SonarAnalyzer.CSharp,Controllers/ProductsController.cs,130,ModelState.IsValid should be checked in controller actions.
+S6967,SonarAnalyzer.CSharp,Controllers/ProductsController.cs,151,ModelState.IsValid should be checked in controller actions.
+S6967,SonarAnalyzer.CSharp,Controllers/ReportsController.cs,45,ModelState.IsValid should be checked in controller actions.
+S6966,SonarAnalyzer.CSharp,Controllers/ReportsController.cs,94,Await ToListAsync instead.
+S6967,SonarAnalyzer.CSharp,Controllers/ReportsController.cs,101,ModelState.IsValid should be checked in controller actions.
+S6966,SonarAnalyzer.CSharp,Controllers/ReportsController.cs,114,Await ToListAsync instead.
+S6967,SonarAnalyzer.CSharp,Controllers/ReportsController.cs,159,ModelState.IsValid should be checked in controller actions.
+S6967,SonarAnalyzer.CSharp,Controllers/ReportsController.cs,181,ModelState.IsValid should be checked in controller actions.
+CS8618,C# kompajler (nullable),Data/ApplicationDbContext.cs,10,Non-nullable property 'Orders' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.
+CS8618,C# kompajler (nullable),Data/ApplicationDbContext.cs,10,Non-nullable property 'Discounts' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.
+CS8618,C# kompajler (nullable),Data/ApplicationDbContext.cs,10,Non-nullable property 'Payments' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.
+CS8618,C# kompajler (nullable),Data/ApplicationDbContext.cs,10,Non-nullable property 'Products' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.
+CS8618,C# kompajler (nullable),Data/ApplicationDbContext.cs,10,Non-nullable property 'Cart' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.
+CS8618,C# kompajler (nullable),Data/ApplicationDbContext.cs,10,Non-nullable property 'Reports' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.
+CS8618,C# kompajler (nullable),Data/ApplicationDbContext.cs,10,Non-nullable property 'ProductOrders' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.
+CS8618,C# kompajler (nullable),Data/ApplicationDbContext.cs,10,Non-nullable property 'ProductSales' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.
+CA1725,.NET analizatori (CA),Data/ApplicationDbContext.cs,26,"In member void ApplicationDbContext.OnModelCreating(ModelBuilder modelBuilder), change parameter name modelBuilder to builder in order to match the identifier as it has been declared in void IdentityDbContext<Person, IdentityRole, string, IdentityUserClaim<string>, IdentityUserRole<string>, IdentityUserLogin<string>, IdentityRoleClaim<string>, IdentityUserToken<string>>.OnModelCreating(ModelBuilder builder)"
+S927,SonarAnalyzer.CSharp,Data/ApplicationDbContext.cs,26,Rename parameter 'modelBuilder' to 'builder' to match the base class declaration.
+S6964,SonarAnalyzer.CSharp,Models/Cart.cs,10,"Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting."
+S6964,SonarAnalyzer.CSharp,Models/Cart.cs,13,"Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting."
+CS8618,C# kompajler (nullable),Models/Cart.cs,23,Non-nullable property 'Product' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.
+CS8618,C# kompajler (nullable),Models/Cart.cs,23,Non-nullable property 'PersonID' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.
+CS8618,C# kompajler (nullable),Models/Cart.cs,23,Non-nullable property 'Person' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.
+S6964,SonarAnalyzer.CSharp,Models/Discount.cs,9,"Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting."
+S6964,SonarAnalyzer.CSharp,Models/Discount.cs,18,"Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting."
+S6964,SonarAnalyzer.CSharp,Models/Discount.cs,19,"Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting."
+S6964,SonarAnalyzer.CSharp,Models/Discount.cs,20,"Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting."
+CA1805,.NET analizatori (CA),Models/Discount.cs,22,Member 'IsUsed' is explicitly initialized to its default value
+CS8618,C# kompajler (nullable),Models/Discount.cs,23,Non-nullable property 'DiscountCode' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.
+CS8618,C# kompajler (nullable),Models/Discount.cs,23,Non-nullable property 'PersonID' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.
+S6964,SonarAnalyzer.CSharp,Models/Order.cs,10,"Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting."
+S6964,SonarAnalyzer.CSharp,Models/Order.cs,13,"Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting."
+S6964,SonarAnalyzer.CSharp,Models/Order.cs,19,"Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting."
+S6964,SonarAnalyzer.CSharp,Models/Order.cs,21,"Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting."
+S6964,SonarAnalyzer.CSharp,Models/Order.cs,31,"Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting."
+CS8618,C# kompajler (nullable),Models/Order.cs,34,Non-nullable property 'Payment' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.
+CS8618,C# kompajler (nullable),Models/Order.cs,34,Non-nullable property 'PersonID' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.
+CS8618,C# kompajler (nullable),Models/Order.cs,34,Non-nullable property 'Person' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.
+S6964,SonarAnalyzer.CSharp,Models/Payment.cs,10,"Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting."
+S6964,SonarAnalyzer.CSharp,Models/Payment.cs,14,"Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting."
+CS8618,C# kompajler (nullable),Models/Payment.cs,34,Non-nullable property 'DeliveryAddress' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.
+CS8618,C# kompajler (nullable),Models/Person.cs,23,Non-nullable property 'FirstName' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.
+CS8618,C# kompajler (nullable),Models/Person.cs,23,Non-nullable property 'LastName' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.
+CS8618,C# kompajler (nullable),Models/Person.cs,23,Non-nullable property 'HomeAdress' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.
+S6964,SonarAnalyzer.CSharp,Models/Product.cs,13,"Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting."
+S6964,SonarAnalyzer.CSharp,Models/Product.cs,52,"Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting."
+CS8618,C# kompajler (nullable),Models/Product.cs,54,Non-nullable property 'Name' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.
+CS8618,C# kompajler (nullable),Models/Product.cs,54,Non-nullable property 'ImageUrl' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.
+CS8618,C# kompajler (nullable),Models/Product.cs,54,Non-nullable property 'Category' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.
+CS8618,C# kompajler (nullable),Models/Product.cs,54,Non-nullable property 'Description' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.
+CS8618,C# kompajler (nullable),Models/Product.cs,54,Non-nullable property 'productType' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.
+CS8618,C# kompajler (nullable),Models/Product.cs,54,Non-nullable property 'Color' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.
+S6964,SonarAnalyzer.CSharp,Models/ProductOrder.cs,9,"Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting."
+S6964,SonarAnalyzer.CSharp,Models/ProductOrder.cs,12,"Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting."
+S6964,SonarAnalyzer.CSharp,Models/ProductOrder.cs,16,"Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting."
+CS8618,C# kompajler (nullable),Models/ProductOrder.cs,23,Non-nullable property 'Order' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.
+CS8618,C# kompajler (nullable),Models/ProductOrder.cs,23,Non-nullable property 'Product' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.
+S6964,SonarAnalyzer.CSharp,Models/ProductSale.cs,9,"Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting."
+S6964,SonarAnalyzer.CSharp,Models/ProductSale.cs,11,"Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting."
+S6964,SonarAnalyzer.CSharp,Models/ProductSale.cs,15,"Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting."
+CS8618,C# kompajler (nullable),Models/ProductSale.cs,18,Non-nullable property 'Product' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.
+CS8618,C# kompajler (nullable),Models/Registercs.cs,11,Non-nullable property 'FirstName' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.
+CS8618,C# kompajler (nullable),Models/Registercs.cs,17,Non-nullable property 'LastName' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.
+CS8618,C# kompajler (nullable),Models/Registercs.cs,24,Non-nullable property 'HomeAdress' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.
+CS8618,C# kompajler (nullable),Models/Registercs.cs,29,Non-nullable property 'Email' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.
+CS8618,C# kompajler (nullable),Models/Registercs.cs,34,Non-nullable property 'PhoneNumber' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.
+CS8618,C# kompajler (nullable),Models/Registercs.cs,39,Non-nullable property 'Password' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.
+CS8618,C# kompajler (nullable),Models/Registercs.cs,45,Non-nullable property 'ConfirmPassword' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.
+S6964,SonarAnalyzer.CSharp,Models/Report.cs,11,"Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting."
+S6964,SonarAnalyzer.CSharp,Models/Report.cs,14,"Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting."
+S6964,SonarAnalyzer.CSharp,Models/Report.cs,15,"Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting."
+CS8618,C# kompajler (nullable),Models/Report.cs,26,Non-nullable property 'Content' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.
+CS8618,C# kompajler (nullable),Models/Report.cs,26,Non-nullable property 'PersonID' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.
+CS8618,C# kompajler (nullable),Models/Report.cs,26,Non-nullable property 'Person' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.
+S6966,SonarAnalyzer.CSharp,Program.cs,62,Await RunAsync instead.
+CS8604,C# kompajler (nullable),Services/EmailService.cs,19,Possible null reference argument for parameter 's' in 'int int.Parse(string s)'.
+CA1305,.NET analizatori (CA),Services/EmailService.cs,19,"The behavior of 'int.Parse(string)' could vary based on the current user's locale settings. Replace this call in 'EmailService.SendEmailAsync(string, string, string)' with a call to 'int.Parse(string, IFormatProvider)'."
+CS8604,C# kompajler (nullable),Services/EmailService.cs,27,"Possible null reference argument for parameter 'address' in 'MailAddress.MailAddress(string address, string? displayName)'."
+CA1050,.NET analizatori (CA),Services/UnclaimedOrderChecker.cs,11,Declare types in namespaces
+S3903,SonarAnalyzer.CSharp,Services/UnclaimedOrderChecker.cs,11,Move 'UnclaimedOrderChecker' into a named namespace.
+CA2016,.NET analizatori (CA),Services/UnclaimedOrderChecker.cs,32,Forward the 'stoppingToken' parameter to the 'ToListAsync' method or pass in 'CancellationToken.None' explicitly to indicate intentionally not propagating the token
+S3267,SonarAnalyzer.CSharp,Services/UnclaimedOrderChecker.cs,37,Loop should be simplified by calling Select(order => order.Person))
+CS8604,C# kompajler (nullable),Services/UnclaimedOrderChecker.cs,42,Possible null reference argument for parameter 'toEmail' in 'Task EmailService.SendReminder(string toEmail)'.
+CA2016,.NET analizatori (CA),Services/UnclaimedOrderChecker.cs,47,Forward the 'stoppingToken' parameter to the 'ToListAsync' method or pass in 'CancellationToken.None' explicitly to indicate intentionally not propagating the token
+CA2016,.NET analizatori (CA),Services/UnclaimedOrderChecker.cs,55,Forward the 'stoppingToken' parameter to the 'FindAsync' method or pass in 'CancellationToken.None' explicitly to indicate intentionally not propagating the token
+CS8604,C# kompajler (nullable),Services/UnclaimedOrderChecker.cs,61,Possible null reference argument for parameter 'toEmail' in 'Task EmailService.SendDeactivationNotice(string toEmail)'.
+CA2016,.NET analizatori (CA),Services/UnclaimedOrderChecker.cs,65,Forward the 'stoppingToken' parameter to the 'SaveChangesAsync' method or pass in 'CancellationToken.None' explicitly to indicate intentionally not propagating the token
+CS8605,C# kompajler (nullable),Views/Carts/ConfirmOrder.cshtml,18,Unboxing a possibly null value.
+S1186,SonarAnalyzer.CSharp,Views/Home/BestSellers.cshtml.cs,8,"Add a nested comment explaining why this method is empty, throw a 'NotSupportedException' or complete the implementation."
+CS8600,C# kompajler (nullable),Views/Home/SearchResults.cshtml,17,Converting null literal or possible null value to non-nullable type.
+CS8602,C# kompajler (nullable),Views/Payments/Delete.cshtml,24,Dereference of a possibly null reference.
+CS8602,C# kompajler (nullable),Views/Payments/Details.cshtml,23,Dereference of a possibly null reference.
+CS8602,C# kompajler (nullable),Views/Payments/Index.cshtml,40,Dereference of a possibly null reference.
+CS8602,C# kompajler (nullable),Views/Products/Details.cshtml,23,Dereference of a possibly null reference.
+CS8602,C# kompajler (nullable),Views/Products/Details.cshtml,28,Dereference of a possibly null reference.

@@ -161,19 +161,20 @@ namespace Task6.Controllers
             }
 
             if (rez.Termin != null)
-            {
-                var terminDateTime = rez.Termin.Datum.Date;
-                if (TimeSpan.TryParse(rez.Termin.Vrijeme, out var terminVrijeme))
-                {
-                    terminDateTime = terminDateTime.Add(terminVrijeme);
-                }
+{
+    var terminDateTime = rez.Termin.Datum.Date;
 
-                if (terminDateTime < DateTime.UtcNow)
-                {
-                    TempData["CancelError"] = "Rezervaciju nije moguće otkazati.";
-                    return RedirectToAction("Index", "Profil");
-                }
-            }
+    if (TimeSpan.TryParse(rez.Termin.Vrijeme, out var terminVrijeme))
+    {
+        terminDateTime = terminDateTime.Add(terminVrijeme);
+    }
+
+    if (!ReservationCancellationValidator.CanCancel(terminDateTime, DateTime.UtcNow))
+    {
+        TempData["CancelError"] = "Rezervaciju nije moguće otkazati manje od 2 sata prije termina.";
+        return RedirectToAction("Index", "Profil");
+    }
+}
 
             rez.Status = false;
 
